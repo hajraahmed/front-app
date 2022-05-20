@@ -1,5 +1,4 @@
 import axios from "axios";
- 
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
@@ -24,9 +23,6 @@ export const PostForm = ({ updatePostList }) => {
               
               console.log("error")
         })
-
-        
- 
     } catch(error) {
       console.log(error)
     } 
