@@ -3,19 +3,22 @@ import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { Container, Navbar } from 'react-bootstrap';
+import Header from './components/Header';
+
+ 
 function App() {
   return (
     <>
+      
       <Container>
-        <Navbar expand="lg" variant="light" bg="light">
-          <Container>
-            <Link className="nav-link" to="/">Home</Link>
-            <Link className="nav-link" to="/about">About Me</Link>
-          </Container>
-        </Navbar><br />
+        <Header />
+
+        
       
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/:user_id/posts" element={<HomePage />} />
+
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

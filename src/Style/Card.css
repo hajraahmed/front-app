@@ -1,0 +1,197 @@
+.sidebar {
+
+    float: left;
+
+    padding: 10px;
+    border-right-style: groove;
+
+
+
+    /* Should be removed. Only for demonstration */
+
+}
+
+.Main {
+    float: left;
+    width: 75%;
+    padding: 10px;
+
+
+
+
+}
+
+h6 {
+    color: #a79e9e
+}
+
+.heading {
+    float: left;
+    font-weight: bolder;
+    font-family: "Times New Roman",
+        Times,
+        serif;
+    margin-top: 185px;
+}
+
+#sidebar-content {
+    font-family: Arial,
+        Helvetica,
+        sans-serif;
+    width: 100%;
+}
+
+#sidebar-content td {
+    padding: 28px;
+    color: rgb(100, 100, 100);
+    font-weight: bold;
+
+}
+
+.contact {
+    background-color: rgb(221, 230, 252);
+    color: blue;
+    padding: 15px;
+}
+
+.card-body {
+
+    border-radius: 65px;
+}
+
+#sidebar-content th {
+
+    padding: 18px;
+    color: blue;
+    font-weight: bold;
+
+}
+
+.member-div-para {
+    text-align: center;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    margin-top: 25px;
+}
+
+.member-div {
+    background-color: rgb(221, 230, 252);
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 15px;
+
+}
+
+.member {
+    color: #645e5e;
+
+}
+
+.instructor {
+    color: blue;
+
+}
+
+.modal-content {
+    border-radius: 15px !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+
+}
+
+#sidebar-content tr:hover {
+    background-color: #ddd;
+}
+
+#sidebar-content th {
+    color: rgb(55, 111, 231);
+    font-weight: bold;
+}
+
+.main-div {
+    background-color: rgb(221, 251, 252);
+    margin-top: 255px;
+    margin-left: 55px;
+    margin-right: 15px;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: large;
+
+}
+
+.modal-info {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.modal-cancel {
+    height: 45px;
+    width: 45px;
+    background-color: rgb(255, 251, 251);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 90%;
+    margin-bottom: 5%;
+    ;
+}
+
+.modal-info-container {
+    margin-bottom: 20px;
+    background-color: #ddd;
+    border-radius: 25px;
+    padding: 55px;
+}
+
+
+
+.modal-div {
+    margin-top: 15px;
+}
+
+
+
+.span-class {
+    margin-left: 15px;
+}
+
+.card-text {
+    text-align: center;
+    font-family: Arial,
+        Helvetica,
+        sans-serif;
+}
+
+.card-holder {
+    margin-top: 180px;
+    display: flex;
+    width:20px;
+}
+
+.single-card {
+    margin-right: 40px;
+ 
+}
+.card-text{
+    margin-top:70px  !important;
+    color:#ddd
+
+}
+.card-body{
+    background-color: rgb(78, 107, 185) !important;
+}
+.card{
+    border-color: transparent !important;
+
+}
+ 
