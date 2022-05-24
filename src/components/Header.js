@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../Style/Header.css';
 
 export default function Header() {
-    { console.log("header component") }
+   
     return (
 
         <div>
@@ -11,11 +11,11 @@ export default function Header() {
 
                 <nav className='navigation'>
                     <ul className='nav-items2'>
-
-                        <Link to="/" className='active-state header-button'>Home </Link>
-
                         <li className='list-items'>
-
+                            <Link to="/" className='active-state header-button'>Home </Link>
+                        </li>
+                        <li className='list-items'>
+                            <Link to="/about" className='active-state header-button'>About</Link>
                         </li>
                     </ul>
                 </nav>

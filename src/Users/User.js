@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React  from "react";
 import Card from 'react-bootstrap/Card';
-import '../Style/Card.css';
-
-
+import { useNavigate } from 'react-router-dom';
+ import '../Style/Card.css';
 export function User({ user }) {
+   
+    const history = useNavigate();
+    const Posts = () => {
+        console.log("inside user post")
+        history(`/${user.id}/posts`);
+    }
     return (
          
             <div className="single-card">
 
-                <Card style={{ width: '25rem' }}>
+                <Card  onClick={()=>Posts()} style={{ width: '25rem' }}>
 
                     <Card.Body>
                     <h1 className="card-text">{user.name}</h1>

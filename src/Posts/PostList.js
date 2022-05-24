@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react"
 import { Post } from "./Post"
 import { PostForm } from './PostForm'
- 
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import '../Style/Post.css';
 
-export const PostList = () => {
-  const [posts, setPosts] = useState ([])
-  const [isUpdate, setUpdate] = useState (false)
+export const PostList = (props) => {
+  const [posts, setPosts] = useState([])
+  const [isUpdate, setUpdate] = useState(false)
+  const { user_id } = useParams();
 
   useEffect(() => {
     getPosts()
@@ -16,38 +18,37 @@ export const PostList = () => {
   const getPosts = async () => {
     try {
       const response = await axios
-        .get('http://localhost:3000/api/v1/posts')
+        .get(`http://localhost:3000/api/v1/users/${user_id}/posts`)
 
       const data = response.data
+      console.log("postdata", data)
+      setPosts(response.data.posts)
 
-      setPosts(data.reverse())
-
-    } catch(error) {
+    } catch (error) {
       console.log(error)
     }
   }
 
-  const updatePostList = (IPost) => {
+  const updatePostList = () => {
     let _posts = posts;
-    let post = IPost
-    _posts.unshift(post);
+
     setPosts(_posts);
 
     setUpdate(true)
   }
-  
+
   return (
     <>
-      <PostForm updatePostList={updatePostList} />
-      
-      <h1>Post List</h1>
-      {posts.map((post) => (
-        <Post
-          key={post.id} 
-          title={post.title}
-          content={post.content}
-        />
-      ))}
+
+      <div className="post-card-holder">
+
+        {posts?.map((post) => {
+          return <Post
+            postdata={post}
+          />
+        })}
+      </div>
+
     </>
   )
 }

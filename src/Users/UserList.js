@@ -5,11 +5,8 @@ import '../Style/Card.css';
 import axios from 'axios';
 
 export const UserList = () => {
-
-    // const userdata = []
-    const [userData, setUserData] = useState()
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+ 
+    const [userData, setUserData] = useState([])
     const getUsers = async () => {
         try {
             const response = await axios
@@ -17,9 +14,8 @@ export const UserList = () => {
 
             const data = response.data
             setUserData(response.data.users)
-            console.log("data", response.data.users)
-            // userdata.push(data.users)
-            // console.log("userdataaaa", userdata)
+            
+         
 
 
 
@@ -30,7 +26,7 @@ export const UserList = () => {
 
     useEffect(() => {
         getUsers()
-        console.log("useEff")
+      
 
     }, [])
 
@@ -44,8 +40,8 @@ export const UserList = () => {
             <div className="card-holder">
           
             {
-                userData?.map((post) => {
-                    return <User user={post} />
+                userData?.map((userdata) => {
+                    return <User user={userdata} />
                 }
 
                 )}

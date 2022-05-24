@@ -24,7 +24,7 @@
     box-sizing: border-box;
     display: block;
     width: 100%;
-    background-color: #8f5c2c;
+     
     border-bottom: 4px solid #40a4c8;
     color: #fff;
 
@@ -61,7 +61,7 @@
 }
 
 .header-button {
-    background-color: #858f2c;
+   
     /* Green */
 
     color: rgb(255, 255, 255);
@@ -72,17 +72,7 @@
     font-size: 16px;
 }
 
-.header-button2 {
-    background-color: #703b09;
-    /* Green */
-    border: none;
-    color: white;
-    padding: 10px 26px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
+ 
 
 .nav-items2 {
     margin: 0;

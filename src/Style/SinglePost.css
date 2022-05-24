@@ -1,0 +1,9 @@
+.post-card-holder {
+    margin-top: 160px;
+    padding: 10px;
+    background-color: rgb(78, 137, 185);
+    width:100%;
+    color:aliceblue;
+    border-radius:20px;
+    height:100%;
+}
