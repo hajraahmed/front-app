@@ -5,7 +5,10 @@ import { PostList } from './Posts/PostList';
 import { SinglePost } from './Posts/SinglePost';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { Container } from 'react-bootstrap';
-import Header from './components/Header';
+import { UpdateUser } from './Users/UpdateUser';
+import { EditPost } from './Posts/EditPost';
+import { PostForm } from './Posts/PostForm';
+ import Header from './components/Header';
 
  
 function App() {
@@ -20,6 +23,10 @@ function App() {
           <Route path="/:user_id/posts/:post_id" element={<SinglePost />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="/:user_id/edit" element={<UpdateUser />} />
+          <Route path="/:user_id/:post_id/edit" element={<EditPost />} />
+          <Route path="/:user_id/create" element={<PostForm/>} />
+           
         </Routes>
       </Container>
     </>

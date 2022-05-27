@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { Post } from "./Post"
-import { PostForm } from './PostForm'
 import { useParams } from 'react-router-dom';
+import { PostForm } from "./PostForm";
 import axios from 'axios';
 import '../Style/Post.css';
 
@@ -10,7 +10,7 @@ export const PostList = (props) => {
   const [isUpdate, setUpdate] = useState(false)
   const { user_id } = useParams();
 
-  useEffect(() => {
+    useEffect(() => {
     getPosts()
     setUpdate(false)
   }, [isUpdate])
@@ -39,15 +39,15 @@ export const PostList = (props) => {
 
   return (
     <>
-
       <div className="post-card-holder">
-
         {posts?.map((post) => {
           return <Post
             postdata={post}
           />
         })}
+
       </div>
+      <PostForm/>
 
     </>
   )
