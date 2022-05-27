@@ -2,21 +2,20 @@ import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-
+import { useParams } from 'react-router-dom';
 export const PostForm = ({ updatePostList }) => {
+  const { user_id } = useParams();
+ 
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
-
   const { register, handleSubmit, formState: { errors } } = useForm();
-
   const onSubmit = async () => {
       const postData =
           { title, content }
-     
-
+    
     try {
       await axios
-          .post('http://localhost:3000/api/v1/posts', {post: postData}).then((response) => {
+          .post(`http://localhost:3000/api/v1/users/${user_id}/posts`, {post: postData}).then((response) => {
               
             updatePostList(response.data)
           }).catch((error) => {

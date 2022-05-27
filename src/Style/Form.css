@@ -1,0 +1,95 @@
+@media (min-width: 600px) {
+    .form-block {
+        width: 500px;
+    }
+}
+
+.form-container {
+    margin-top: 80px;
+}
+
+.form-block {
+    margin: 180px auto;
+    width: 100;
+    text-align: center;
+    -webkit-box-shadow: 0 2px 3px #ccc;
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ 
+
+
+.form-inputs {
+    width: 100%;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.select-tag {
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font: inherit;
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-inputs2 {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-inputs3 {
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font: inherit;
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.btn-all {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.Form-button {
+    background-color: white;
+    color: black;
+    border: 2px solid #fff;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.signin-btn {
+    color: #944317;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.submit-btn {
+    color: #5c9210;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.checkout-container {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 65px;
+}

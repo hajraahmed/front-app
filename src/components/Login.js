@@ -1,20 +1,37 @@
-import { React } from 'react';
+import { React,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 import '../Style/Header.css';
 
-export default function Header() {
-     const history = useNavigate();
-     const Item = () => {
-         
-        return (
-            <>
-                <button onClick={() => history.back()}>Back</button>
-            </>
-        );
-    };
-   
+export default function Login() {
+    const GetUserValue = async () => {
+        try {
+            const response = await axios
+                .get(`http://localhost:3000/api/v1/users`).then((response) => {
+                    const data = response.data.users;
+                    console.log("data", data)
+                     ;
+
+
+                     
+
+                });
+
+            //setFormValues(response.data.users)
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    useEffect(() => {
+        GetUserValue()
+       
+
+    }, [])
+    
+
     return (
 
         <div>
